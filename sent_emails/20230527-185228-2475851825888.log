@@ -1,0 +1,26 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 8bit
+Subject: Password reset on 127.0.0.1:8000
+From: webmaster@localhost
+To: neha.gautam869@gmail.com
+Date: Sat, 27 May 2023 13:22:28 -0000
+Message-ID: 
+ <168519374880.32800.4935582945254933554@BLRKEC457881L.ad.infosys.com>
+
+
+You're receiving this email because you requested a password reset for your user account at 127.0.0.1:8000.
+
+Please go to the following page and choose a new password:
+
+http://127.0.0.1:8000/accounts/reset/MTc/bovgfg-eedba24bf64f70405611416efa9b2999/
+
+Your username, in case you’ve forgotten: neha
+
+Thanks for using our site!
+
+The 127.0.0.1:8000 team
+
+
+
+-------------------------------------------------------------------------------

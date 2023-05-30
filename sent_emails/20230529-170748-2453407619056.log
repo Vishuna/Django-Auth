@@ -1,0 +1,26 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 8bit
+Subject: Password reset on 127.0.0.1:8000
+From: webmaster@localhost
+To: nidhi.gautam8690@gmail.com
+Date: Mon, 29 May 2023 11:37:49 -0000
+Message-ID: 
+ <168536026900.30528.10843064668161284385@BLRKEC457881L.ad.infosys.com>
+
+
+You're receiving this email because you requested a password reset for your user account at 127.0.0.1:8000.
+
+Please go to the following page and choose a new password:
+
+http://127.0.0.1:8000/accounts/reset/MTY/boz0x0-0bbe04ac439cfa9307894f2b243aa41c/
+
+Your username, in case you’ve forgotten: nidhi
+
+Thanks for using our site!
+
+The 127.0.0.1:8000 team
+
+
+
+-------------------------------------------------------------------------------
