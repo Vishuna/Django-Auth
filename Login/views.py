@@ -66,7 +66,8 @@ def activate(request,uidb64,token):
 
 
 def user_profile(request):
-    return render(request,'registration/profile.html')
+    print("prfile")
+    return render(request,'profile.html')
 
 
 
