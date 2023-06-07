@@ -1,0 +1,14 @@
+.base_container{
+    background-color: #E6E6FA;
+}
+
+label{
+    margin-top:6px;
+}
+.form-control{
+    margin-top:2px;
+}
+.profile_image_view{
+    height:2px !important;
+    width:2px !important;
+}

@@ -65,9 +65,9 @@ def activate(request,uidb64,token):
         return HttpResponse("Activation link is valid!")
 
 
-def user_profile(request):
-    print("prfile")
-    return render(request,'profile.html')
+# def user_profile(request):
+#     print("prfile")
+#     return render(request,'profile.html')
 
 
 
