@@ -5,6 +5,8 @@ from templates import *
 from .models import *
 from datetime import datetime
 
+from django.core.paginator import Paginator
+
 # Create your views here.
 
 
@@ -44,8 +46,12 @@ def user_profile(request):
 
 def view_profile(request):
     users_data=UserProfile.objects.all()
+    paginator=Paginator(users_data,3)
+    page_number=request.GET.get('page')
+    page=paginator.get_page(page_number)
     context={
         'users_data':users_data,
+        'page':page,
     }
     for i in users_data:
         print(i.user_img)

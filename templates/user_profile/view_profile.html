@@ -12,7 +12,7 @@
             <th>Image</th>
             <th>Role</th>
         </tr>
-        {% for data in users_data %}
+        {% for data in page %}
         <tr>
             
             <td>
@@ -39,4 +39,11 @@
         {% endfor %}
     </thead>
 </table>
+{% if page.has_previous %}
+    <a href="?page={{ page.previous_page_number }}">previous</a>
+{% endif %}
+<span class="current-page">{{ page.number }}</span>
+{% if page.has_next %}
+<a href="?page={{ page.next_page_number }}">next</a>
+{% endif %}
 {% endblock content %}
