@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load static %}
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Date of Birth</th>
+            <th>Address</th>
+            <th>Contact</th>
+            <th>Image</th>
+            <th>Role</th>
+        </tr>
+        {% for data in page %}
+        <tr>
+            
+            <td>
+                {{data.first_name}} {{data.last_name}}
+            </td>
+            <td>
+                {{data.address}}
+            </td> 
+            <td>
+                {{data.contact}}
+            </td>
+            <td>
+               <img src="{{ data.user_img.url }}" alt="uploads/user.png" class="profile_image_view">
+            </td>
+            <td>
+                {{data.role}}
+            </td>
+            <td>
+                {{data.date_of_birth}}
+            </td>
+
+           
+        </tr>
+        {% endfor %}
+    </thead>
+</table>
+{% if page.has_previous %}
+    <a href="?page={{ page.previous_page_number }}">previous</a>
+{% endif %}
+<span class="current-page">{{ page.number }}</span>
+{% if page.has_next %}
+<a href="?page={{ page.next_page_number }}">next</a>
+{% endif %}
+{% endblock content %}

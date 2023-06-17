@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 def get_default_image():
-    return 'static/media/images/user.png'
+    return 'uploads/user.png'
 class UserProfile(models.Model):
     ROLE_CHOICES=(
         ('admin','admin'),
@@ -12,7 +12,6 @@ class UserProfile(models.Model):
     GENDER=(
         ('male','male'),
         ('female','female'),
-
     )
     ATTENDANCE=(
         ('present','present'),
@@ -28,7 +27,7 @@ class UserProfile(models.Model):
     contact=models.CharField(max_length=15,blank=True)
     gender=models.CharField(max_length=10,choices=GENDER,blank=True)
     attendance=models.CharField(max_length=10,choices=ATTENDANCE,blank=True)
-    user_img=models.ImageField(upload_to='static/media/images/',default=get_default_image,blank=True)
+    user_img=models.ImageField(upload_to='uploads/',default=get_default_image,blank=True)
     
     def __str__(self):
         return self.first_name
@@ -47,7 +46,7 @@ class Student(models.Model):
     country=models.CharField(max_length=30,blank=True)
     contact=models.CharField(max_length=15,blank=True)
     gender=models.CharField(max_length=30,blank=True,choices=GENDER)
-    st_img=models.ImageField(upload_to='static/media/images/',default=get_default_image,blank=True)
+    st_img=models.ImageField(upload_to='uploads/',default=get_default_image,blank=True)
 
     def __str__(self):
         return self.name 

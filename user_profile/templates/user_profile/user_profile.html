@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% load fontawesome_5 %}
+{% block content %}
+
+<h3>User Profile</h3>
+
+<form class="form_class" action="{% url 'user_profile' %}" method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+    <div class="form-group">
+        <label for="fname">First Name</label>
+        <input type="text" class="form-control" id="fname" name="fname" placeholder="Enter your first name">
+
+    </div>
+    <div class="form-group">
+        <label for="lname">Last Name</label>
+        <input type="text" class="form-control" id="lname" name="lname" placeholder="Enter your last name">
+        
+    </div>
+ 
+
+    <div class="form-group">
+      <label for="dob">Date of birth</label>
+      <input type="text" class="form-control" name="dob" placeholder="Date of Birth" id="dob"/>
+    </div>
+
+    <div class="form-group">
+      <label for="address">Address</label>
+      <input type="text" class="form-control" id="address" name="address" placeholder="Enter your Address">
+    </div>
+
+    <div class="form-group">
+      <label for="contact">Contact</label>
+        <input type="number" class="form-control" name="contact" id="contact" placeholder="Enter your Contact">
+      
+    </div>
+
+    <div class="form-group">
+      <label for="role">Role</label>
+      <select class="form-control" name="role" id="role">
+        <option value="admin">Admin</option>
+        <option value="staff">Staff</option>
+        <option value="student">Student</option>
+      </select>
+    </div>
+    
+    <div class="form-group">
+      <label for="gender">Gender</label>
+      <select class="form-control" name="gender" id="gender">
+        <option value="">Select Gender</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+      </select>
+    </div>
+
+   <div class="form-group">
+    <label for="attendance">Attendance</label>
+    <select class="form-control" name="attendance">
+      <option value="present">Present</option>
+      <option value="absent">Absent</option>
+      <option value="leave">Leave</option>
+    </select>
+   </div>
+
+   <div class="form-group">
+    <label for="imgUpload">Upload and Image</label>
+    <input type="file" id="imgUpload" name="imgUpload" class="form-control">
+   </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+{% endblock %}

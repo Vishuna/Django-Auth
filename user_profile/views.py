@@ -79,4 +79,4 @@ def student(request):
         'forms':student_form,
         }
 
-    return render(request,'student/student_form.html',context)
+    return render(request,'user_profile/student_form.html',context)
