@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Videos{% endblock title %}
+
+{% block content %}
+
+<form action="" method="post">
+    {% csrf_token %}
+    <h1 class="yt_download_heading">Download YouTube Video</h1>
+    <div class="input-group mb-5">
+        <input type="text" class="form-control" name="link" placeholder="YouTube Video Link" aria-label="Recipient's username" aria-describedby="basic-addon2">
+        <div class="input-group-append">
+            <input type="submit"  class="input-group-text"  value="Download" id="basic-addon2">
+        </div>
+      </div>
+   
+</form>
+
+<div class="view_b">
+<a href="{% url 'view_videos' %}">View Videos</a>
+</div>
+{% endblock content %}
